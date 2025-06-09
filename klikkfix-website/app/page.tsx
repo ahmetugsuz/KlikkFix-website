@@ -85,7 +85,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold mb-2 tracking-wide text-white drop-shadow-lg">KlikkFix</h1>
         <p className="text-lg text-gray-400 mb-10 shadow-sm">“Easiest and fastest way to use AI”</p>
       </div>
-      <div className="flex flex-row justify-center items-center w-full mt-35 mb-8 gap-8" style={{ minHeight: 400 }}>
+      <div className="flex flex-row justify-center items-center w-full mt-50 mb-8 gap-8" style={{ minHeight: 400 }}>
         {/* Images on the left-bottom */}
         <div className="relative flex flex-col items-end justify-end" style={{ minWidth: 700 }}>
           <div className="absolute -left-15 -bottom-5 z-0" style={{ filter: 'brightness(0.85)' }}>
@@ -112,7 +112,7 @@ export default function Home() {
         {/* CTA section on the right */}
         <div className="flex flex-col items-center justify-center ml-8">
           <span className="mb-4 text-2xl font-bold text-purple-300 text-center">Start using AI in your browser instantly!</span>
-          <Link href="#" className="bg-gradient-to-r from-purple-600 to-purple-400 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-colors duration-200 text-lg">
+            <Link href="#"className="bg-gradient-to-r from-purple-600 to-purple-400 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-200 text-lg transform hover:scale-105 hover:shadow-[0_0_24px_4px_rgba(168,85,247,0.35)]">
             Get KlikkFix
           </Link>
         </div>
