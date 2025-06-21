@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔧 KlikkFix.com – Official Website for the AI-Powered Extension
 
-## Getting Started
+KlikkFix.com is the official site for the KlikkFix browser extension — your AI-powered tool for instantly improving text with a right-click. This site acts as the central hub for learning, installing, and supporting KlikkFix.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 What's on KlikkFix.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✨ **Live Demo** – Try KlikkFix directly from your browser
+- 📸 **Screenshots** – Preview how KlikkFix works
+- 📦 **Download Links** – Install from Chrome Web Store or Edge Add-ons
+- 💳 **Pricing Table** – Compare Basic, Pro, and Premium plans
+- 📥 **Contact Form** – Reach out for feedback, support, or inquiries
+- 📑 **Feature Overview** – Learn what KlikkFix can do and how it helps
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🖥️ Built With
 
-## Learn More
+- **Framework:** Next.js with App Router
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Hosting:** Vercel
+- **Forms:** Built-in contact form API
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Purpose of the Site
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+KlikkFix.com is designed to:
 
-## Deploy on Vercel
+- Help new users understand what KlikkFix does
+- Offer a frictionless download path
+- Showcase features, visuals, and plans
+- Act as a support channel for end users
+- Boost trust and credibility for product launch and ongoing growth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔐 Privacy
+
+The site does not use tracking or analytics scripts unless consented to. The contact form is optional and does not store messages without purpose.
+
+---
+
+## 📩 Support & Links
+
+- 🧠 Extension: [KlikkFix Extension GitHub](https://github.com/yourusername/klikkfix)
+- 📧 Email: [support@klikkfix.com](mailto:support@klikkfix.com)
+- 🌐 Creator: [Ahmet Tugsuz](https://ahmettu.com)
+
+---
+
+**Created by Ahmet Tugsuz**  
+Fullstack Developer & Creator of KlikkFix and MagicalClick  
+🔗 Personal website: [ahmettu.com](https://ahmettu.com)
