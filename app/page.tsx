@@ -118,7 +118,6 @@ export default function Home() {
         <div className="relative flex flex-col items-end justify-end" style={{ minWidth: 700 }}>
           <div className="absolute -left-15 -bottom-5 z-0" style={{ filter: 'brightness(0.85)' }}>
             <Image
-            
               src="/plan.jpg"
               alt="Plan page"
               width={600}
@@ -145,6 +144,7 @@ export default function Home() {
             style={{
               imageRendering: 'auto',
               transform: 'translateZ(0)',
+              willChange: 'transform',
               WebkitBackfaceVisibility: 'hidden',
             }}
           />
