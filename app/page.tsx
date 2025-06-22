@@ -207,7 +207,7 @@ export default function Home() {
               <li>Right-click to use</li>
             </ul>
             <a
-              href="https://chrome.google.com/webstore/detail/klikkfix/your-chrome-extension-id"
+              href="https://chromewebstore.google.com/detail/klikkfix/ofoakggookgcolmahjmnfkamcjfahala"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-600 to-purple-400 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-200 text-base mt-auto transform hover:-translate-y-1 hover:shadow-xl"
@@ -226,7 +226,7 @@ export default function Home() {
               <li>Easy install from Edge Add-ons</li>
             </ul>
             <a
-              href="https://microsoftedge.microsoft.com/addons/detail/klikkfix/your-edge-extension-id"
+              href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-600 to-purple-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-200 text-base mt-auto transform hover:-translate-y-1 hover:shadow-xl"
