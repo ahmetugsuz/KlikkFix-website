@@ -39,7 +39,7 @@ export default function Footer() {
           <ul className="space-y-1">
             <li>
               <a
-                href="https://www.linkedin.com/in/klikk-fix-043b4b370/"
+                href="https://www.linkedin.com/company/klikkfix"
                 target="_blank"
                 className="underline hover:text-purple-300"
               >
