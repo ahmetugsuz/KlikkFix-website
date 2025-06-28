@@ -10,6 +10,7 @@ const tools = [
   { key: 'professional', label: 'Professional Text' },
   { key: 'solve', label: 'Solve' },
   { key: 'summarize', label: 'Summarize Text' },
+  { key: 'translate', label: 'Translate Text' },
 ];
 
 <span className="w-4 h-4">

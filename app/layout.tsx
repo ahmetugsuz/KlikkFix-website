@@ -11,12 +11,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        {/* Standard favicon (ICO format) */}
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+
+        {/* PNG favicons (modern browsers) */}
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon_io/favicon-96x96.png?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png?v=2" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png?v=2" />
+
+        {/* Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png?v=2" />
+
+        {/* Manifest for PWA */}
         <link rel="manifest" href="/favicon/site.webmanifest" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>KlikkFix</title>
       </head>

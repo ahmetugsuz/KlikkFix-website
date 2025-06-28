@@ -13,6 +13,7 @@ const interestText = {
   solve: "Let KlikkFix handle the math, logic, or code — instantly.",
   summarize: "Get straight to the point without missing the point.",
   magic: "Because smart people shouldn't waste time rewriting the same things.",
+  translate: "Don’t switch tabs just to understand. Let KlikkFix translate smarter and faster.",
 };
 
 
@@ -22,6 +23,7 @@ const toolDescriptions = {
   solve: 'Lets get straight to the point. Solve IT.',
   summarize: "Too long to read? Summarize what you're reading on the spot, or even your own writings.",
   magic: 'A magical touch that does more than improve — it transforms.',
+  translate: "Translate what you're reading instantly — no tabs, no Google Translate, just natural sounding results.",
 };
 
 const toolTitles = {
@@ -30,6 +32,7 @@ const toolTitles = {
   solve: 'Solve',
   summarize: 'Summarize Text',
   magic: 'MagicalClick',
+  translate: 'Translate Text'
 };
 
 const toolImages = {
@@ -51,6 +54,10 @@ const toolImages = {
     src: '/demoVideoes/DemoSummarizeNorskeLeksikon.mp4',
     muted: true
   },
+  translate: {
+    type: 'image',
+    src: '/demoImages/VGTranslateEdited.png'
+  }
 };
 
 const toolExamples = {
@@ -69,6 +76,10 @@ const toolExamples = {
   summarize: {
     before: 'I am writing to inform you that your application has been received.',
     after: 'Your application was received.',
+  },
+  translate: {
+    before: 'この製品は現在在庫切れですが、再入荷のお知らせを希望される場合は、こちらをクリックしてください。',
+    after: 'This product is currently out of stock, but if you would like to be notified when it is back in stock, please click here.',
   },
 };
 
@@ -175,6 +186,7 @@ export default function ToolExample({ type }) {
     improve: [isMac ? 'shift' : 'shiftFilled', isMac ? 'command' : 'ctrl', 'I'],
     professional: [isMac ? 'shift' : 'shiftFilled', isMac ? 'command' : 'ctrl', 'P'],
     solve: [isMac ? 'shift' : 'shiftFilled', isMac ? 'command' : 'ctrl', 'S'],
+    translate: [isMac ? 'shift' : 'shiftFilled', isMac ? 'command' : 'ctrl', 'T'],
   };
 
   useEffect(() => {

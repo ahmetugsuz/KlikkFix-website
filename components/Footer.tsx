@@ -111,6 +111,10 @@ export default function Footer() {
   <a href="/contact" className="underline hover:text-purple-300 ml-1">
     Contact
   </a>{' '}
+  |
+  <a href="https://ahmetugsuz.github.io/klikkFix-extension/privacy" target="_blank" className="underline hover:text-purple-300 ml-1">
+    Privacy Policy
+  </a>{' '}
   | Built by{' '}
   <a
     href="https://ahmettu.com"
