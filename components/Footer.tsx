@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-
+import Image from "next/image";
+import Favicon from '../public/favicon/favicon.svg'
 export default function Footer() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
@@ -34,6 +35,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left Side */}
         <div className="space-y-4 text-center md:text-left">
+          <Image src={Favicon} alt='Favicon' width={50}/>
           <h2 className="text-lg font-semibold text-white">KlikkFix</h2>
           <p>Created by Ahmet Tugsuz</p>
           <ul className="space-y-1">

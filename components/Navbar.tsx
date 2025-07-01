@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import Favicon from '../public/favicon/favicon.svg'
 
 export default function Navbar() {
   const router = useRouter();
@@ -48,31 +50,35 @@ export default function Navbar() {
       }`}
       style={{ width: "fit-content" }}
     >
-      <nav className="sticky rounded-full backdrop-blur-md bg-[#1a102a] bg-opacity-95 text-white shadow-lg flex gap-8 px-12 py-3 items-center mx-auto w-fit">
-        <Link href="/" className="text-lg font-bold tracking-wide">KlikkFix</Link>
+      <nav
+        className="sticky rounded-full backdrop-blur-md bg-transparent text-white shadow-lg flex gap-8 px-12 py-3 items-center mx-auto w-fit"
+        style={{ backgroundColor: "rgba(30, 30, 30, 0.5)", boxShadow: "0 2px 6px rgba(0,0,0,0.25)" }}
+      >
+
+        <Link href="/" className="text-lg font-bold tracking-wide"><Image src={Favicon} alt="favicon" width={25}/></Link>
         <div className="flex gap-10 ml-8">
           <button
             onClick={() => handleClick("#demo")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-purple-400 transition cursor-pointer"
           >
             Demo
           </button>
           <button
             onClick={() => handleClick("#features")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-purple-400 transition cursor-pointer"
           >
             Features
           </button>
           <button
             onClick={() => handleClick("#downloads")}
-            className="hover:text-purple-400 transition"
+            className="hover:text-purple-400 transition cursor-pointer"
           >
             Download
           </button>
-          <Link href="/pricing" className="hover:text-purple-400 transition">
+          <Link href="/pricing" className="hover:text-purple-400 transition cursor-pointer">
             Pricing
           </Link>
-          <Link href="/contact" className="hover:text-purple-400 transition">
+          <Link href="/contact" className="hover:text-purple-400 transition cursor-pointer">
             Contact
           </Link>
         </div>

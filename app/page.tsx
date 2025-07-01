@@ -111,7 +111,7 @@ export default function Home() {
       {/* Title and subtitle, upper left but still prominent */}
       <div className="absolute left-16 top-16 md:left-32 md:top-15 z-20 text-left pt-32 pb-48 snap-start">
         <h1 className="text-5xl font-bold mb-2 tracking-wide text-white drop-shadow-lg">KlikkFix</h1>
-        <p className="text-lg text-gray-400 mb-10 shadow-sm">“Easiest and fastest way to use AI”</p>
+        <p className="text-lg text-gray-400 mb-10 shadow-sm">Easiest and fastest way to use AI</p>
       </div>
       <div className="flex flex-row justify-center items-center w-full mt-50 mb-8 gap-8" style={{ minHeight: 400 }}>
         {/* Images on the left-bottom */}
