@@ -33,3 +33,17 @@ body {
 .spin-on-hover:hover {
   animation: slow-rotate 8s linear infinite;
 }
+
+
+[data-aos="fade-up-small"] {
+  opacity: 0;
+  transform: translateY(30px); /* Smaller offset */
+  transition-property: opacity, transform;
+  transition-duration: 800ms;
+  transition-timing-function: ease;
+}
+
+[data-aos="fade-up-small"].aos-animate {
+  opacity: 1;
+  transform: translateY(30);
+}
