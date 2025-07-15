@@ -4,17 +4,25 @@ import '../app/globals.css'
 
 export default function RightKlikkIntro() {
     return (
-      <section className="w-full min-h-screen px-6 py-36 flex flex-col items-center justify-center text-center scroll-mt-0 snap-start">
+      <section className="w-full min-h-screen px-6 py-24 flex flex-col items-center justify-center text-center scroll-mt-0 snap-start">
         <h2 className="text-4xl md:text-5xl font-bold text-white max-w-4xl leading-snug">
             Just a mouse-click away.
         </h2>
-        <p className="text-xl text-purple-300 font-medium mb-10">Never been so easy.</p>
+        <p className="text-xl text-purple-300 font-medium mb-5">Never been so easy.</p>
   
         <div className="bg-[#23143a] bg-opacity-90 rounded-2xl px-8 py-6 shadow-lg border border-[#2a1a3a] mb-10">
           <p className="text-purple-400 text-sm uppercase mb-2 tracking-wide">How it works</p>
-          <p className="text-white font-medium inline-flex items-center">
-            Highlight your text → right-click → <span className="text-purple-500 inline-flex items-center font-semibold"> KlikkFix  </span> 
+          <p className="text-white font-medium inline-flex items-center pb-10">
+            Highlight your text → right-click →  <span className="text-purple-500 inline-flex items-center font-semibold">  KlikkFix  </span> 
+
           </p>
+            <video
+            src="/demoVideoes/IntroVideo.mov"
+            className="rounded-lg max-w-full w-[575px] max-w-[600px]"
+            autoPlay
+            muted
+            loop
+          />
         </div>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
   Handle daily tasks like <strong>“Translate”</strong>,{" "}
