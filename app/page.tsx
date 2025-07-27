@@ -136,41 +136,35 @@ export default function Home() {
             Start using AI in your browser instantly!
           </span>
 
-          <div className="flex flex-row gap-4">
-            <a
-              href="#demo"
-              className="group flex items-center bg-gradient-to-r from-gray-800 to-gray-600 hover:bg-purple-700 text-white font-semibold text-lg tracking-wide px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:shadow-[0_0_24px_4px_rgba(0,2,0,0.35)] scroll-smooth overflow-hidden"
+                <div className="flex flex-row gap-4">
+        {/* Preview Button */}
+        <a href="#demo" className="group relative p-[2px] rounded-md bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-gradient bg-[length:200%_200%]">
+          <span className="flex items-center justify-center px-6 py-3 bg-gray-900 rounded-md text-white text-lg font-semibold relative z-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              className="w-6 h-6 mr-2"
             >
-              {/* Play Icon */}
-              <div className="flex items-center justify-center mr-2 w-6 h-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  className="w-6 h-6"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 5v14l11-7z" />
-                </svg>
-              </div>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 5v14l11-7z" />
+            </svg>
+            <span>Preview</span>
+            <span className="overflow-hidden max-w-0 group-hover:max-w-[5rem] transition-all duration-350 ease-in-out ml-1">
+              &nbsp;Demo
+            </span>
+          </span>
+        </a>
 
-              {/* Text with expanding "Demo" */}
-              <span className="flex items-center whitespace-nowrap">
-                <span>Preview</span>
-                <span className="overflow-hidden max-w-0 group-hover:max-w-[5rem] transition-all duration-350 ease-in-out ml-1">
-                  &nbsp;Demo
-                </span>
-              </span>
-            </a>
+        {/* KlikkFix Button */}
+        <a href="#downloads" className="group relative p-[2px] rounded-md bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-gradient bg-[length:200%_200%] hover:brightness-110  transition-transform  ">
+          <span className="px-8 py-3 bg-transparent rounded-md text-white text-lg font-semibold block ">
+            Try KlikkFix
+          </span>
+        </a>
+      </div>
 
-            <a
-              href="#downloads"
-              className="bg-gradient-to-r from-purple-600 to-purple-400 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-200 text-lg transform hover:-translate-y-0.5 hover:shadow-[0_0_24px_4px_rgba(168,85,247,0.35)] scroll-smooth"
-            >
-              Get KlikkFix
-            </a>
-          </div>
         </div>
       </div>
             {/* Single large filled SVG wave across the screen, behind the images, with a smooth fade to black */}
