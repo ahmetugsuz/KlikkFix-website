@@ -37,7 +37,8 @@ export default function Footer() {
         <div className="space-y-4 text-center md:text-left">
           <Image src={Favicon} alt='Favicon' width={50}/>
           <h2 className="text-lg font-semibold text-white">KlikkFix</h2>
-          <p>Created by Ahmet Tugsuz</p>
+          <p>Ahmet Tugsuz — Founder</p>
+          <p>Temoor Kiani — Co-Founder</p>
           <ul className="space-y-1">
             <li>
               <a
@@ -117,7 +118,7 @@ export default function Footer() {
   <a href="https://ahmetugsuz.github.io/klikkFix-extension/privacy" target="_blank" className="underline hover:text-purple-300 ml-1">
     Privacy Policy
   </a>{' '}
-  | Built by{' '}
+  | By{' '}
   <a
     href="https://ahmettu.com"
     target="_blank"
@@ -125,6 +126,16 @@ export default function Footer() {
     className="underline hover:text-purple-300"
   >
     Ahmet Tugsuz
+  </a>
+  &
+  &nbsp;
+  <a
+    href="mailto:temoor20011@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-purple-300"
+  >
+    Temoor Kiani
   </a>
 </div>
 
