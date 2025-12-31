@@ -127,6 +127,7 @@ export default function Footer() {
   >
     Ahmet Tugsuz
   </a>
+  &nbsp;
   &
   &nbsp;
   <a
