@@ -32,10 +32,10 @@ export default function DownloadPage() {
         <Image src="/logos/microsoft_Icon.png" alt="Edge Logo" width={56} height={56} className="mb-4" priority />
         <h3 className="text-2xl font-semibold text-white mb-2">Windows Desktop</h3>
         <ul className="text-gray-300 mb-6 text-left list-disc pl-5 space-y-2 leading-relaxed">
-          <li>All Chrome features, now on Edge</li>
-          <li>Seamless AI text tools</li>
-          <li>Works on most websites</li>
-          <li>Easy install from Edge Add-ons</li>
+          <li><span className="text-white"></span> Faster, smoother, and way more capable than the extension.</li>
+          <li><span className="text-white">Works Everywhere:</span> Enhance Text or Code in any application</li>
+          <li><span className="text-white">Your Customized Shortcuts:</span> Runs instantly on highlighted text right at your fingertips wherever you are on your PC</li>
+          <li><span className="text-white">Personalized Writing DNA:</span> AI that learns and mimics your unique writing style, that sounds like you.</li>
         </ul>
         <a
           href="/downloads/KlikkFix-Setup.exe"
