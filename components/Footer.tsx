@@ -37,8 +37,8 @@ export default function Footer() {
         <div className="space-y-4 text-center md:text-left">
           <Image src={Favicon} alt='Favicon' width={50}/>
           <h2 className="text-lg font-semibold text-white">KlikkFix</h2>
-          <p>Ahmet Tugsuz — Founder</p>
-          <p>Temoor Kiani — Co-Founder</p>
+          <p className="my-0.5">Ahmet Tugsuz — Founder</p>
+          <p >Temoor Kiani — Co-Founder</p>
           <ul className="space-y-1">
             <li>
               <a
@@ -68,6 +68,14 @@ export default function Footer() {
               </a>
             </li>
           </ul>
+
+              <a
+                href="https://www.linkedin.com/company/klikkfix"
+                target="_blank"
+                className="underline hover:text-purple-300"
+              >
+                Whitepaper
+              </a>
         </div>
 
         {/* Right Side Contact Form */}
