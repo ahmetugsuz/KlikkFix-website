@@ -70,9 +70,9 @@ export default function Footer() {
           </ul>
 
               <a
-                href="https://www.linkedin.com/company/klikkfix"
-                target="_blank"
-                className="underline hover:text-purple-300"
+                href="/whitepaper/WhitepaperV1.pdf"
+                download="KlikkFix_Whitepaper.pdf"
+                className="underline hover:text-purple-300 cursor-pointer"
               >
                 Whitepaper
               </a>
