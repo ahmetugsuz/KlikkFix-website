@@ -8,7 +8,7 @@ export default function MobileGate() {
 
       <div className="relative z-10 flex flex-col items-center">
         <Image
-          src="/logos/logo_transparent.png" // Make sure this path is correct for your logo
+          src="/logos/favicon.ico" 
           alt="KlikkFix Logo"
           width={80}
           height={80}
@@ -40,7 +40,7 @@ export default function MobileGate() {
 
         {/* You can still let them read the whitepaper on mobile! */}
         <a
-          href="/whitepaper/whitepaper_v1.pdf"
+          href="/whitepaper/WhitepaperV1.pdf"
           target="_blank" 
           className="mt-12 text-gray-500 hover:text-white text-sm underline underline-offset-4 transition-colors"
         >
