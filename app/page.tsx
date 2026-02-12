@@ -12,6 +12,7 @@ import ClientLayout from '../components/ClientLayout';
 import ToolShowcaseSection from "../components/ToolShowCase";
 import DashImg from '../public/extensionScreenshots/Dashboard.png';
 import DownloadPage from './download/page';
+import MobileGate from "@/components/MobileGate";
 
 import { useEffect } from 'react';
 
@@ -75,6 +76,15 @@ export default function Home() {
   return (
 
     <main className="flex flex-col items-center justify-start w-full scroll-smooth snap-y snap-mandatory pt-37 pb-48 relative">
+
+      {/* 1. MOBILE VIEW: Visible ONLY on small screens */}
+      <div className="block md:hidden w-full h-screen">
+        <MobileGate />
+      </div>
+      
+      {/* 2. DESKTOP VIEW: Hidden on mobile, Visible on medium+ screens */}
+      <div className="hidden md:block w-full">
+
       <AOSInitializer />
       <div className="relative w-full flex flex-row justify-center items-center " style={{ minHeight: 400, paddingTop: '8rem' }}>
 
@@ -228,6 +238,7 @@ export default function Home() {
         <DownloadPage />
       </FadeSection>
 
+      </div>
     </main>
   );
 }

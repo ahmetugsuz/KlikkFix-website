@@ -34,7 +34,7 @@ export default function DownloadPage() {
   return (
     <section
       id="downloads"
-      className="scroll-mt-20 w-full min-h-screen max-w-5xl py-32 px-4 flex flex-col items-center justify-center snap-start relative"
+      className="scroll-mt-20 w-full min-h-screen max-w-5xl py-32 px-4 flex flex-col items-center justify-center snap-start relative mx-auto"
     >
       <h2 className="text-3xl font-bold text-white mb-2 text-center">
         Download KlikkFix
