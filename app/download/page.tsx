@@ -7,13 +7,25 @@ export default function DownloadPage() {
   const [showInfo, setShowInfo] = useState(false);
 
   // No 'e' argument needed anymore. Pure logic.
-  const handleDownload = () => {
+  const handleDownloadWindows = () => {
     setShowInfo(true);
 
     // Trigger the download programmatically
     const link = document.createElement("a");
     link.href = "/downloads/KlikkFix-Setup.exe";
     link.download = "KlikkFix-Setup.exe";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDownloadMacOS = () => {
+    setShowInfo(false);
+
+    // Trigger the download programmatically
+    const link = document.createElement("a");
+    link.href = "/downloads/KlikkFix-2.0.1.dmg";
+    link.download = "KlikkFix-2.0.1.dmg";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -85,15 +97,15 @@ export default function DownloadPage() {
           </ul>
           {/* Changed to button to fix 'e' error and handle logic cleaner */}
           <button
-            onClick={handleDownload}
-            className="bg-gradient-to-r from-blue-600 to-purple-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-200 text-base mt-auto transform hover:-translate-y-1 hover:shadow-xl"
+            onClick={handleDownloadWindows}
+            className="bg-gradient-to-r cursor-pointer from-blue-600 to-purple-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-200 text-base mt-auto transform hover:-translate-y-1 hover:shadow-xl"
           >
             Download for Windows
           </button>
         </div>
 
         {/* MacOS Card */}
-        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-[340px] min-h-[500px] opacity-70 transition-shadow duration-300 hover:shadow-2xl">
+        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-[340px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
           <Image
             src="/logos/Apple.svg"
             alt="Apple Logo"
@@ -104,13 +116,16 @@ export default function DownloadPage() {
           />
           <h3 className="text-2xl font-semibold text-white mb-2">MacOS</h3>
           <ul className="text-gray-300 mb-6 text-left list-disc pl-5 space-y-4 leading-relaxed">
-            <li>Coming soon to MacOS</li>
-            <li>All the same features across your Mac</li>
-            <li>Stay tuned for updates</li>
+          <li><span className="text-white">Apple Silicon Optimized:</span> Blazing fast performance on M1, M2, and M3 chips.</li>
+          <li><span className="text-white">System-Wide Integration:</span> Use KlikkFix inside Notes, Mail, Slack, and any coding environment.</li>
+          <li><span className="text-white">Writing Intelligence:</span> Seamlessly rewrite or summarize text with your Linguistic DNA on macOS.</li>
           </ul>
-          <span className="bg-gray-700 text-gray-300 font-semibold px-6 py-2 rounded-full shadow text-base cursor-not-allowed mt-auto">
-            Not available yet
-          </span>
+          <button
+            onClick={handleDownloadMacOS}
+            className="bg-gradient-to-r z-10 cursor-pointer from-blue-600 to-purple-400 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition-all duration-200 text-base mt-auto transform hover:-translate-y-1 hover:shadow-xl"
+          >
+            Download for Mac
+          </button>
         </div>
       </div>
 
