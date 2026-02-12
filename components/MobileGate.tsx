@@ -8,7 +8,7 @@ export default function MobileGate() {
 
       <div className="relative z-10 flex flex-col items-center">
         <Image
-          src="/logos/favicon.ico" 
+          src="/favicon.ico" 
           alt="KlikkFix Logo"
           width={80}
           height={80}
