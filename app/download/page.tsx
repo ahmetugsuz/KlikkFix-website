@@ -34,21 +34,21 @@ export default function DownloadPage() {
   return (
     <section
       id="downloads"
-      className="scroll-mt-20 w-full min-h-screen max-w-5xl py-32 px-4 flex flex-col items-center justify-center snap-start relative mx-auto"
+      className="scroll-mt-20 w-full min-h-screen max-w-7xl py-2 px-4 flex flex-col items-center justify-center snap-start relative mx-auto"
     >
       <h2 className="text-3xl font-bold text-white mb-2 text-center">
         Download KlikkFix
       </h2>
-      <h3 className="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-10">
+      <h3 className="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-5">
         Get the latest Desktop versions of KlikkFix
       </h3>
       
-      <div className="w-14 h-1 bg-purple-500 rounded-full mb-10 mx-auto"></div>
+      <div className="w-14 h-1 bg-purple-500 rounded-full mb-5 mx-auto"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 w-full justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-20 w-full justify-center justify-items-center">
         
         {/* Chrome Extension Card */}
-        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-[340px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
+        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-full max-w-[360px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
           <Image
             src="/logos/chrome.png"
             alt="Chrome Logo"
@@ -77,7 +77,7 @@ export default function DownloadPage() {
         </div>
 
         {/* Windows Desktop App Card */}
-        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-[340px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
+        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-full max-w-[360px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
           <Image
             src="/logos/microsoft_Icon.png"
             alt="Windows Logo"
@@ -89,10 +89,10 @@ export default function DownloadPage() {
           <h3 className="text-2xl font-semibold text-white mb-2">
             Windows Desktop
           </h3>
-          <ul className="text-gray-300 mb-6 text-left list-disc pl-5 space-y-4 leading-relaxed">
+          <ul className="text-gray-300 mb-3 text-left list-disc pl-5 space-y-4 leading-relaxed">
             <li><span className="text-white"></span> Faster, smoother, and way more capable than the extension.</li>
-            <li><span className="text-white">Works Everywhere:</span> Enhance Text or Code in any application</li>
-            <li><span className="text-white">Your Customized Shortcuts:</span> Runs instantly on highlighted text right at your fingertips wherever you are on your PC</li>
+            <li><span className="text-white">Works Everywhere:</span> Enhance Text or Code in any application.</li>
+            <li><span className="text-white">Your Customized Shortcuts:</span> Runs instantly on highlighted text right at your fingertips.</li>
             <li><span className="text-white">Personalized Writing DNA:</span> AI that learns and mimics your unique writing style, that sounds like you.</li>
           </ul>
           {/* Changed to button to fix 'e' error and handle logic cleaner */}
@@ -105,7 +105,7 @@ export default function DownloadPage() {
         </div>
 
         {/* MacOS Card */}
-        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-[340px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
+        <div className="bg-[#23143a] bg-opacity-90 rounded-2xl p-8 flex flex-col items-center shadow-lg border border-[#2a1a3a] w-full max-w-[360px] min-h-[500px] transition-shadow duration-300 hover:shadow-2xl">
           <Image
             src="/logos/Apple.svg"
             alt="Apple Logo"

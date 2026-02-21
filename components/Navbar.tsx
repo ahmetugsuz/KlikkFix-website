@@ -75,9 +75,8 @@ export default function Navbar() {
           >
             Download
           </button>
-          <Link href="/pricing" className="hover:text-purple-400 transition cursor-pointer">
-            Pricing
-          </Link>
+          
+
           <Link href="/contact" className="hover:text-purple-400 transition cursor-pointer">
             Contact
           </Link>
