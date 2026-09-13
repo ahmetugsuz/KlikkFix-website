@@ -17,6 +17,7 @@ import MobileGate from "@/components/MobileGate";
 import { useEffect } from 'react';
 
 const features = [
+  
   {
     icon: "🖱",
     title: "Right-Click Activation",

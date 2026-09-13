@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Favicon from '../public/favicon/favicon.svg'
+import LandingNavigation from './landing-v2/LandingNavigation';
 
 export default function Navbar() {
   const router = useRouter();
@@ -42,6 +43,8 @@ export default function Navbar() {
       router.push(`/${id}`);
     }
   };
+
+  if (pathname === "/landing-v2") return <LandingNavigation />;
 
   return (
     <div
