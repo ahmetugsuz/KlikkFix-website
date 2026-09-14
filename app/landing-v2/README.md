@@ -24,9 +24,40 @@ If the browser blocks autoplay, the poster and resume control remain available.
 Omit `src` for a clean placeholder. An unavailable or unsupported source displays
 a readable fallback without changing the container dimensions.
 
-The download CTA uses the existing `/download` page. This variant is mobile-readable;
+The primary CTA and navbar Download link target the on-page `#downloads` section.
+That section keeps the existing product download destinations and links to `/download` for details. This variant is mobile-readable;
 installing the product still requires a supported desktop browser/computer.
 
 Refinement: the primary CTA follows the demo. The dashboard, tool overview, closing CTA,
 and existing footer share restrained blue/purple/magenta accents. Footer presentation
 is scoped by the variant marker; its existing links and contact submission remain intact.
+
+## Content mapping
+
+- IntroSection: restore the AI-tab problem as a concise before-flow, followed by the solution.
+- RightKlikkIntro: retain the right-click explanation through Select / Use AI / Done; omit the redundant intro video.
+- MagicalClickIntro + ToolShowCase + ToolExample: one dedicated interactive MagicalClick section, with original before/after examples. Rewrite, Shorten, and Expand use explanatory action guides, not invented demo outputs.
+- Original dashboard: retained with existing v2 image treatment, after tools and workflow.
+- FeaturesPage: restore activation, text enhancement/context, customization, and privacy; omit Stripe implementation details.
+- DownloadPage: restore Chrome, Windows, and Apple Silicon Mac options with original URLs; the Edge destination is labeled as the general Add-ons store.
+- Footer: keep all existing links and submission functionality with unchanged v2 styling.
+
+Only dedicated variant files change. Stop the development server before `npm run build`,
+then restart it afterward: both commands use `.next` in this Next.js version.
+
+## Media and layout polish
+
+The original Improve, Translate, and Solve PNGs are RGBA assets with transparent
+backgrounds. They are served from public URLs without build-time image decoding
+(Turbopack exceeded its image memory limit on the original Translate export).
+No transparency re-export is required. Both original recordings are restored in
+the tool panel, with native controls, muted inline loops, visibility-aware playback,
+and reduced-motion handling. Text examples remain directly below the media.
+Rewrite, Shorten, and Expand retain their action guides because the original site
+has no dedicated media for these actions.
+
+The icon-only navigation sits within a reserved top band. All navbar links target
+local anchors, including the contact footer, using shared scroll clearance.
+Full-width page atmosphere and container-query-width demo glows replace fixed
+negative decoration insets. Content remains constrained to the existing widths.
+Section spacing uses shared responsive tokens. Footer and helper text are larger.

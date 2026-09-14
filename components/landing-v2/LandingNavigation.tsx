@@ -9,13 +9,12 @@ export default function LandingNavigation() {
       <nav className={styles.nav} aria-label="Main navigation">
         <Link href="/" className={styles.brand} aria-label="KlikkFix home">
           <Image src="/favicon/favicon.svg" alt="" width={28} height={28} />
-          <span>KlikkFix</span>
         </Link>
         <div className={styles.navLinks}>
           <a href="#demo">Demo</a>
           <a href="#features">Features</a>
-          <Link href="/download">Download</Link>
-          <Link href="/contact">Contact</Link>
+          <a href="#downloads">Download</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
