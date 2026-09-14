@@ -3,10 +3,10 @@ import Link from "next/link";
 import styles from "./landing-v2.module.css";
 
 const features = [
-  ["Right-click activation", "Start with the text in front of you. Highlight it and choose an action from the browser’s context menu."],
+  ["AI where you work", "Start with the text in front of you. Use a right-click in the browser or your assigned keyboard shortcut in the desktop app."],
   ["Clearer, more natural writing", "Improve clarity, grammar, tone, and fluency. Context-aware AI works with the meaning of your selected text."],
-  ["A setup that fits your work", "Choose the actions you use most in your dashboard, from professional writing to translation and problem-solving."],
-  ["Privacy-focused processing", "Your text is processed through a backend proxy without logging or storage. Read the privacy policy for details."],
+  ["A setup that fits your work", "Choose your browser actions and assign your desktop shortcuts around the tasks you do most."],
+  ["Privacy-focused processing", "Understand how your text is handled when you use KlikkFix. Read the privacy policy for processing and data-handling details."],
 ];
 
 export default function ProductDetails() {
@@ -32,14 +32,14 @@ export default function ProductDetails() {
       <section className={styles.storySection} id="downloads" aria-labelledby="platform-title">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>WORKS WHERE YOU WORK</p>
-          <h2 id="platform-title">In your browser.<br /><span>Across your workday.</span></h2>
-          <p>Use the extension on supported websites, including Gmail, Google Docs, LinkedIn, and Notion. Desktop apps bring KlikkFix into your Mac and Windows workflow.</p>
+          <h2 id="platform-title">Beyond the browser.</h2>
+          <p>Use KlikkFix across the apps you work in every day. Choose the Chrome extension for browser actions, or a desktop app for your Mac or Windows workflow.</p>
         </div>
         <div className={styles.platformList}>
           <article>
             <Image src="/logos/chrome.png" alt="" width={32} height={32} />
             <h3>Chrome extension</h3>
-            <p>AI actions for the text you select in your browser.</p>
+            <p>Right-click AI actions on supported sites, including Gmail, Google Docs, LinkedIn, and Notion.</p>
             <a href="https://chromewebstore.google.com/detail/klikkfix/ofoakggookgcolmahjmnfkamcjfahala" className={styles.textLink} target="_blank" rel="noopener noreferrer">Get for Chrome ↗</a>
           </article>
           <article>

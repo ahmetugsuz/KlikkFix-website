@@ -25,9 +25,9 @@ export default function MagicalClick() {
     <section id="magicalclick" className={styles.storySection} aria-labelledby="magical-title">
       <div className={styles.magicalHeading}>
         <div>
-          <p className={styles.eyebrow}>THE KLIKKFIX EXPERIENCE</p>
+          <p className={styles.eyebrow}>BROWSER EXPERIENCE</p>
           <h2 id="magical-title">Meet MagicalClick.</h2>
-          <p>Your everyday AI tools, one right-click away. Explore an action to see what it can do.</p>
+          <p>Your AI actions, one right-click away. Select text in your browser, open KlikkFix, and choose what happens next.</p>
         </div>
         <Image src="/MagicalClickDesign/magicDesign.png" alt="MagicalClick: AI tools connected around a cursor" width={120} height={120} className={styles.magicImage} />
       </div>

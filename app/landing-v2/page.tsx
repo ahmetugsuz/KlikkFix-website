@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import ProductExperiences from "@/components/landing-v2/ProductExperiences";
+import DesktopExperience from "@/components/landing-v2/DesktopExperience";
 import MagicalClick from "@/components/landing-v2/MagicalClick";
 import ProductDetails from "@/components/landing-v2/ProductDetails";
 import DemoVideo from "@/components/landing-v2/DemoVideo";
@@ -10,9 +12,9 @@ import styles from "@/components/landing-v2/landing-v2.module.css";
 const demoSource = "/demoVideoes/outlookDemoProfessional.mp4";
 
 const steps = [
-  { title: "Select", text: "Highlight text directly where you’re working." },
-  { title: "Use AI", text: "Right-click to rewrite, summarize, translate, or solve." },
-  { title: "Done", text: "Get the result and carry on with your work." },
+  { title: "Select", text: "Highlight the text you want to work with." },
+  { title: "Trigger KlikkFix", text: "Right-click in your browser or use a keyboard shortcut on desktop." },
+  { title: "Keep going", text: "Get the result without leaving your workflow." },
 ];
 
 export default function LandingV2Page() {
@@ -22,19 +24,19 @@ export default function LandingV2Page() {
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}><span className={styles.statusDot} /> YOUR WORKFLOW. WITH AI.</p>
           <h1 id="landing-title">AI. <span>One click away.</span></h1>
-          <p className={styles.subtitle}>Rewrite, summarize, and translate right in your browser.<br className={styles.desktopBreak} /> Keep your focus. Skip the app switching.</p>
+          <p className={styles.subtitle}>Rewrite, summarize, translate, and more.<br className={styles.desktopBreak} /> Use AI without leaving your workflow.</p>
         </div>
         <DemoVideo src={demoSource} />
         <div className={styles.demoCta}>
           <Link href="#downloads" className={styles.primaryCta}>Try KlikkFix <span aria-hidden="true">↗</span></Link>
-          <p className={styles.ctaNote}>Start with the Chrome extension · Also available for Mac & Windows</p>
+          <p className={styles.ctaNote}>Browser extension · Desktop apps for Mac & Windows</p>
         </div>
       </section>
 
       <section className={styles.storySection} aria-labelledby="problem-title">
         <div className={styles.sectionHeading}>
           <p className={styles.eyebrow}>LESS TIME BETWEEN YOU AND THE ANSWER</p>
-          <h2 id="problem-title">Another task.<br /><span>Another AI tab?</span></h2>
+          <h2 id="problem-title">AI shouldn’t interrupt<br /><span>your workflow.</span></h2>
           <p>Using AI shouldn’t mean leaving your work behind. The copying, prompting, and switching back all interrupt your flow.</p>
         </div>
         <div className={styles.beforeFlow}>
@@ -43,8 +45,8 @@ export default function LandingV2Page() {
         </div>
         <div className={styles.solutionHeading}>
           <p className={styles.eyebrow}>THERE’S A SHORTER WAY</p>
-          <h2>Just a mouse-click away.</h2>
-          <p>Bring AI to the text you’re already working with. Select it, choose a KlikkFix action, and keep going.</p>
+          <h2>Bring AI to your work.</h2>
+          <p>A right-click in your browser. A shortcut on desktop. Two ways to reach the same result: staying in your flow.</p>
         </div>
         <ol className={styles.steps}>
           {steps.map((step, index) => (
@@ -57,13 +59,17 @@ export default function LandingV2Page() {
         </ol>
       </section>
 
+      <ProductExperiences />
+
       <MagicalClick />
+
+      <DesktopExperience />
 
       <section className={styles.product} id="dashboard" aria-labelledby="product-title">
         <div className={styles.sectionHeading}>
-          <p className={styles.eyebrow}>A SHORTER PATH FROM THOUGHT TO DONE</p>
-          <h2 id="product-title">Your everyday AI tools.<br /><span>All within reach.</span></h2>
-          <p>Choose the tools you use most. Keep them together in your KlikkFix dashboard, ready for your next right-click.</p>
+          <p className={styles.eyebrow}>YOUR TOOLS. YOUR SETUP.</p>
+          <h2 id="product-title">Make KlikkFix yours.</h2>
+          <p>Keep the AI actions you use most within reach. Choose your browser tools in the dashboard, and assign custom shortcuts in the desktop app.</p>
         </div>
         <div className={styles.dashboardFrame}>
           <Image src={dashboard} alt="KlikkFix dashboard with available tools, selected tools, and account settings" sizes="(max-width: 760px) 92vw, 920px" className={styles.dashboard} />

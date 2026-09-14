@@ -61,3 +61,52 @@ local anchors, including the contact footer, using shared scroll clearance.
 Full-width page atmosphere and container-query-width demo glows replace fixed
 negative decoration insets. Content remains constrained to the existing widths.
 Section spacing uses shared responsive tokens. Footer and helper text are larger.
+
+## Locked product story: browser + desktop
+
+Order: hero → workflow friction → Select / Trigger KlikkFix / Keep going → two
+product experiences → MagicalClick (browser) → custom shortcuts (desktop) →
+dashboard/customization → features → downloads → final CTA → existing footer.
+
+`ProductExperiences.tsx` introduces the two interaction methods.
+`DesktopExperience.tsx` owns the desktop copy and the optional `desktopMedia` config.
+`DesktopMedia.tsx` renders the concept illustration, screenshot, or video.
+The illustration uses generic “Your shortcut” labels, not product keybindings.
+No future assets are requested until a real source is configured.
+
+### Add future desktop media
+
+Place screenshots under `public/images/desktop/`, e.g. `shortcuts.png`.
+Set `desktopMedia` in `DesktopExperience.tsx` to:
+
+```tsx
+{ kind: "image", src: "/images/desktop/shortcuts.png", alt: "Describe the actual desktop screenshot", width: 1600, height: 1000 }
+```
+
+Use the actual source dimensions. Images load lazily; failed sources fall back
+to the shortcut illustration. Keep the original source assets.
+
+Place a desktop demo under `public/videos/desktop/`, e.g. `workflow.mp4`, and its
+poster under `public/images/desktop/`. Configure:
+
+```tsx
+{ kind: "video", src: "/videos/desktop/workflow.mp4", poster: "/images/desktop/workflow-poster.jpg", description: "Describe the real workflow shown in the video.", autoplay: true }
+```
+
+The video source is attached only near visibility. Muted inline autoplay/loop
+respects reduced motion; native controls allow pause and manual playback.
+Use `autoplay: false` for poster + manual play. Failed media falls back to the
+illustration. A new source remounts the video cleanly.
+
+For the future combined marketing demo, update `demoSource` in `page.tsx`, then
+the label, caption, description and poster in `DemoVideo.tsx`. The current browser
+recording remains an example of KlikkFix in action.
+
+### Verify before production
+
+Confirm current Windows/macOS capabilities, supported app/site coverage, Apple
+Silicon requirements, and premium access terms. Confirm the privacy policy covers
+both browser and desktop; the feature copy links to it without asserting an
+unverified cross-platform no-storage guarantee. Edge still links to the general
+Add-ons store, not a confirmed KlikkFix listing. The displayed dashboard is the
+existing browser screenshot; this page does not claim it configures desktop shortcuts.

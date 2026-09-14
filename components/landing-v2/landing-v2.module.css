@@ -202,6 +202,34 @@
 .actionGuide { margin-top: 32px; padding-top: 24px; border-top: 1px solid #b799de24; color: #c9c0d4; font-size: 15px; line-height: 1.7; }
 .actionGuide a { display: inline-block; margin-top: 24px; color: #c9abed; font-size: 13px; }
 .featureLayout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
+.experienceChoices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--inner-gap); }
+.experienceChoices article { display: flex; flex-direction: column; align-items: flex-start; padding: 16px 0; }
+.experienceChoices article + article { padding-left: var(--inner-gap); border-left: 1px solid #b799de30; }
+.experienceChoices h3 { font-size: clamp(24px, 2.4vw, 30px); font-weight: 500; letter-spacing: -.03em; line-height: 1.2; max-width: 390px; margin: 16px 0; }
+.experienceChoices article > p:not(.eyebrow) { color: #b5acbf; font-size: 15px; line-height: 1.7; margin-bottom: 18px; max-width: 430px; }
+.desktopLayout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.desktopBenefit { margin-top: 22px; color: #b5acbf; font-size: 15px; line-height: 1.7; }
+.desktopLayout .textLink { display: inline-block; margin-top: 18px; }
+.shortcutIllustration { padding: clamp(20px, 3vw, 32px); border-top: 1px solid #b799de40; border-bottom: 1px solid #b799de30; background: radial-gradient(ellipse at 60% 50%, #6442841a, transparent 75%); }
+.shortcutMappings { list-style: none; margin-top: 22px; }
+.shortcutMappings li { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.25fr); align-items: center; gap: 14px; padding: 13px 0; color: #e0d5eb; font-size: 14px; }
+.shortcutMappings li > span:nth-child(2) { color: #a88acc; }
+.keycap { display: inline-block; width: fit-content; border: 1px solid #b799de4d; border-bottom-width: 3px; border-radius: 7px; padding: 9px 12px; color: #c7bbd5; background: #ffffff04; font-size: 12px; text-align: center; }
+.shortcutFlow { margin-top: 24px; padding-top: 20px; border-top: 1px solid #b799de24; color: #d1c2e1; font-size: 13px; line-height: 1.9; }
+.shortcutFlow span { padding: 0 5px; color: #a88acc; }
+.shortcutIllustration figcaption, .desktopMedia figcaption { margin-top: 14px; color: #b0a4be; font-size: 12px; line-height: 1.7; }
+.desktopMedia { min-width: 0; }
+.desktopMedia img, .desktopMedia video { display: block; width: 100%; height: auto; border-radius: 10px; }
+.desktopMedia video { aspect-ratio: 16 / 10; object-fit: contain; }
+@media (max-width: 760px) {
+  .experienceChoices, .desktopLayout { grid-template-columns: 1fr; }
+  .experienceChoices article + article { padding: 28px 0 0; border-left: 0; border-top: 1px solid #b799de30; }
+}
+@media (max-width: 380px) {
+  .shortcutIllustration { padding: 18px 10px; }
+  .shortcutMappings li { gap: 8px; font-size: 13px; }
+  .keycap { padding: 8px; font-size: 11px; }
+}
 .featureList > div { padding: 24px 0; border-bottom: 1px solid #b799de24; }
 .featureList > div:first-child { padding-top: 0; }
 .featureList dt { color: #e0d4ec; font-size: 18px; display: flex; gap: 16px; align-items: center; }
