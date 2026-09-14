@@ -11,7 +11,7 @@ export default function LandingNavigation() {
           <Image src="/favicon/favicon.svg" alt="" width={28} height={28} />
         </Link>
         <div className={styles.navLinks}>
-          <a href="#demo">Demo</a>
+          <a href="#magicalclick">Demo</a>
           <a href="#features">Features</a>
           <a href="#downloads">Download</a>
           <a href="#contact">Contact</a>

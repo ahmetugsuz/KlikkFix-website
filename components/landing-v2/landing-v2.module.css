@@ -35,7 +35,7 @@
 :global(body):has(.page) > footer form > * { margin: 0; }
 :global(body):has(.page) > footer :is(input, textarea) { min-width: 0; background: #ffffff04; border: 1px solid #b299cf28; border-radius: 7px; font-size: 14px; padding: 11px 12px; }
 :global(body):has(.page) > footer textarea { grid-column: 1 / -1; resize: vertical; }
-:global(body):has(.page) > footer button { width: fit-content; min-height: 40px; padding: 8px 22px; background: #7651b0; border: 1px solid #c6a4fb30; border-radius: 7px; font-size: 14px; }
+:global(body):has(.page) > footer button { grid-column: 1 / -1; width: 100%; min-height: 40px; padding: 8px 22px; background: #7651b0; border: 1px solid #c6a4fb30; border-radius: 7px; font-size: 14px; cursor: pointer; }
 :global(body):has(.page) > footer form p { align-self: center; }
 :global(body):has(.page) > footer > div:last-child { font-size: 13px; line-height: 2; text-align: left; border-color: #b299cf1c; padding-top: 22px; margin-top: 32px; }
 :global(body):has(.page) > footer :is(a, input, textarea, button):focus-visible { outline: 2px solid #c2a7ff; outline-offset: 4px; }
@@ -44,17 +44,19 @@
 .page :where(a, button):focus-visible, .header :where(a, button):focus-visible {
   outline: 3px solid #c2a7ff; outline-offset: 5px;
 }
-.header { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-band); z-index: 50; padding: 20px 20px 16px; background: #09090e; }
+.header { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-band); z-index: 50; padding: 20px 20px 16px; background: transparent; pointer-events: none; }
+.header > * { pointer-events: auto; }
 .nav {
   display: flex; align-items: center; justify-content: space-between; gap: 26px;
   width: fit-content; max-width: 100%; margin: auto; padding: 10px 22px;
-  border: 1px solid #ffffff17; border-radius: 999px;
-  background: #17161eeb; box-shadow: 0 8px 28px #00000030;
+  border: 1px solid #ffffff10; border-radius: 999px;
+  background: #17161ec2; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 6px 24px #00000020;
 }
 .brand { display: flex; align-items: center; gap: 9px; color: #fafafa; font-size: 18px; font-weight: 700; letter-spacing: -.5px; }
-.navLinks { display: flex; align-items: center; gap: 30px; font-size: 13px; color: #c7c5d1; }
-.navLinks a { padding: 6px 0; transition: color .18s; }
-.navLinks a:hover { color: white; }
+.navLinks { display: flex; align-items: center; gap: 18px; font-size: 15px; font-weight: 500; color: #d6d2df; }
+.navLinks a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 8px; border-radius: 8px; transition: color .18s, background .18s; }
+.navLinks a:hover { color: white; background: #ffffff06; }
 .skipLink { position: absolute; top: -100px; left: 20px; padding: 12px; background: #342050; color: white; }
 .skipLink:focus { top: 0; }
 .hero { padding: 40px 24px 0; position: relative; }
@@ -70,9 +72,9 @@
   min-height: 48px; padding: 0 23px; border: 1px solid #c5a5ff70; border-radius: 9px;
   background: linear-gradient(110deg, #4d62ca, #8250ca 60%, #aa4b9c); color: white;
   box-shadow: 0 3px 20px #8050cf24, inset 0 1px #ffffff20;
-  font-size: 14px; font-weight: 600; transition: background .18s, box-shadow .18s;
+  font-size: 14px; font-weight: 600; transition: filter .18s, box-shadow .18s;
 }
-.primaryCta:hover { background: #8b60dc; box-shadow: 0 4px 26px #8050cf40; }
+.primaryCta:hover { filter: brightness(1.1); box-shadow: 0 4px 26px #8050cf40; }
 .primaryCta span { font-size: 20px; font-weight: 400; }
 .ctaNote { margin-top: 11px; color: #9995a7; font-size: 13px; }
 .demoCta { position: relative; text-align: center; margin: 20px auto 0; }
@@ -135,7 +137,7 @@
   .nav { width: fit-content; padding: 8px 12px; border-radius: 999px; flex-direction: row; gap: 12px; }
   .brand { font-size: 16px; }
   .brand img { width: 23px; height: 23px; }
-  .navLinks { justify-content: space-between; gap: 12px; width: auto; font-size: 12px; }
+  .navLinks { justify-content: space-between; gap: 10px; width: auto; font-size: 14px; }
   .navLinks a { padding: 10px 0; }
   .hero { padding: 35px 16px 0; }
   .heroCopy .eyebrow { font-size: 9px; margin-bottom: 20px; }
@@ -249,7 +251,7 @@
 
 /* The navbar floats within a reserved top band. Native scrolling and anchor
    navigation share one clearance, including the root-layout contact footer. */
-:global(html):has(.page) { scroll-padding-top: calc(var(--nav-band, 96px) + 16px); }
+:global(html):has(.page) { scroll-padding-top: calc(var(--nav-band, 96px) + 16px); scroll-behavior: smooth; }
 :global(body):has(.page) { overflow-y: visible; }
 .page [id], .page section[id], :global(body):has(.page) > footer { scroll-margin-top: 0; }
 .page :is(a, button, input, textarea) { scroll-margin-top: calc(var(--nav-band) + 16px); }
@@ -271,6 +273,9 @@
 }
 @media (max-width: 380px) {
   .nav { padding: 6px 10px; gap: 10px; }
-  .navLinks { font-size: 11px; gap: 9px; }
+  .navLinks { font-size: 13px; gap: 8px; }
   :global(body):has(.page) > footer form { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :global(html):has(.page), :global(body):has(.page) { scroll-behavior: auto; }
 }
