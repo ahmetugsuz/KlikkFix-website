@@ -71,7 +71,11 @@ dashboard/customization → features → downloads → final CTA → existing fo
 `ProductExperiences.tsx` introduces the two interaction methods.
 `DesktopExperience.tsx` owns the desktop copy and the optional `desktopMedia` config.
 `DesktopMedia.tsx` renders the concept illustration, screenshot, or video.
-The illustration uses generic “Your shortcut” labels, not product keybindings.
+The illustration shows user-provided customizable shortcut examples:
+**Shift + Alt + I → Improve Text**, **Shift + Alt + P → Professional Text**,
+**Shift + Alt + S → Summarize**, and **Shift + Alt + T → Translate**.
+These demonstrate a possible user configuration, not fixed/default product bindings.
+The surrounding caption explains that shortcuts are fully customizable.
 No future assets are requested until a real source is configured.
 
 ### Add future desktop media
@@ -104,8 +108,14 @@ recording remains an example of KlikkFix in action.
 
 ### Verify before production
 
-Confirm current Windows/macOS capabilities, supported app/site coverage, Apple
-Silicon requirements, and premium access terms. Confirm the privacy policy covers
+Both desktop downloads display **1 month free · No card required**, as confirmed
+by the product owner. Downloads use the existing EXE and DMG assets; the offer
+is product information supplied by the owner, not enforced by this website.
+
+Confirm current Windows/macOS capabilities, supported app/site coverage, and Apple
+Silicon requirements against desktop application source when available. The Mac
+copy retains the existing Apple Silicon information without asserting shortcut
+parity with Windows. Confirm the privacy policy covers
 both browser and desktop; the feature copy links to it without asserting an
 unverified cross-platform no-storage guarantee. Edge still links to the general
 Add-ons store, not a confirmed KlikkFix listing. The displayed dashboard is the

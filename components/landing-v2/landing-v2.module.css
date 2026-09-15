@@ -169,6 +169,7 @@
   :global(body):has(.page) > footer form { max-width: 440px; }
 }
 .storySection { max-width: 1040px; margin: var(--section-gap) auto 0; padding-top: var(--section-inset); border-top: 1px solid #b590e529; scroll-margin-top: 100px; }
+.storySection:has(.toolExplorer) + .storySection { border-top: 0; }
 .beforeFlow { padding: 26px 30px; border: 1px solid #ffffff12; border-radius: 10px; background: #ffffff02; }
 .beforeFlow ol { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 20px; margin-top: 18px; color: #a7a0b2; font-size: 13px; }
 .beforeFlow li:not(:last-child)::after { content: "→"; margin-left: 20px; color: #655970; }
@@ -197,8 +198,7 @@
 .exampleText span { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #b899df; }
 .exampleText p { color: #c9c0d4; font-size: 14px; line-height: 1.7; margin-top: 8px; overflow-wrap: anywhere; }
 .exampleText > div:last-of-type p { color: #e7ddf4; }
-.exampleText small, .explorerNote { font-size: 13px; color: #a097ad; line-height: 1.7; }
-.explorerNote { margin-top: 16px; }
+.exampleText small { font-size: 13px; color: #a097ad; line-height: 1.7; }
 .actionGuide { margin-top: 32px; padding-top: 24px; border-top: 1px solid #b799de24; color: #c9c0d4; font-size: 15px; line-height: 1.7; }
 .actionGuide a { display: inline-block; margin-top: 24px; color: #c9abed; font-size: 13px; }
 .featureLayout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
@@ -212,12 +212,17 @@
 .desktopLayout .textLink { display: inline-block; margin-top: 18px; }
 .shortcutIllustration { padding: clamp(20px, 3vw, 32px); border-top: 1px solid #b799de40; border-bottom: 1px solid #b799de30; background: radial-gradient(ellipse at 60% 50%, #6442841a, transparent 75%); }
 .shortcutMappings { list-style: none; margin-top: 22px; }
-.shortcutMappings li { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.25fr); align-items: center; gap: 14px; padding: 13px 0; color: #e0d5eb; font-size: 14px; }
-.shortcutMappings li > span:nth-child(2) { color: #a88acc; }
-.keycap { display: inline-block; width: fit-content; border: 1px solid #b799de4d; border-bottom-width: 3px; border-radius: 7px; padding: 9px 12px; color: #c7bbd5; background: #ffffff04; font-size: 12px; text-align: center; }
+.shortcutMappings li { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; padding: 13px 0; color: #e0d5eb; font-size: 14px; }
+.shortcutKeys, .shortcutAction { display: inline-flex; align-items: center; gap: 7px; }
+.shortcutKeys { flex-wrap: wrap; }
+.shortcutAction { gap: 14px; }
+.shortcutKeys > span, .shortcutAction > span:first-child { color: #b69acc; }
+.keycap { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 40px; border: 1px solid #b799de4d; border-bottom-width: 3px; border-radius: 7px; padding: 8px 10px; color: #e0d5eb; background: #ffffff04; font: inherit; font-size: 13px; text-align: center; }
 .shortcutFlow { margin-top: 24px; padding-top: 20px; border-top: 1px solid #b799de24; color: #d1c2e1; font-size: 13px; line-height: 1.9; }
 .shortcutFlow span { padding: 0 5px; color: #a88acc; }
 .shortcutIllustration figcaption, .desktopMedia figcaption { margin-top: 14px; color: #b0a4be; font-size: 12px; line-height: 1.7; }
+.shortcutIllustration .shortcutCustomization { font-size: 14px; }
+.shortcutCustomization strong { display: block; margin-bottom: 5px; color: #e0d5eb; font-weight: 500; }
 .desktopMedia { min-width: 0; }
 .desktopMedia img, .desktopMedia video { display: block; width: 100%; height: auto; border-radius: 10px; }
 .desktopMedia video { aspect-ratio: 16 / 10; object-fit: contain; }
@@ -244,6 +249,9 @@
 .platformList h3 { font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
 .platformList p { font-size: 14px; color: #aaa1b7; line-height: 1.7; margin: 14px 0 22px; }
 .textLink { font-size: 13px; color: #d2b3f1; margin-top: auto; padding: 12px 0; }
+.platformAction { margin-top: auto; min-height: 96px; }
+.platformAction .textLink { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 500; }
+.platformAction .trialNote { margin: 6px 0 0; font-size: 13px; color: #c1b3cf; }
 .textLink:hover, .actionGuide a:hover, .compatibilityNote a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .compatibilityNote { margin-top: 36px; padding-top: 24px; border-top: 1px solid #b799de24; color: #a59bae; font-size: 14px; line-height: 1.8; }
 .compatibilityNote > div { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 12px; color: #c4b3d8; }
@@ -257,6 +265,8 @@
   .platformList article, .platformList article:first-child { padding: 24px 0; border-left: 0; border-bottom: 1px solid #b799de24; }
   .platformList img { margin-bottom: 16px; }
   .platformList p { margin-bottom: 8px; }
+  .platformAction { min-height: 0; }
+  .platformAction .trialNote { margin-bottom: 0; }
 }
 @media (max-width: 600px) {
   .storySection { margin: var(--section-gap) 20px 0; padding-top: var(--section-inset); scroll-margin-top: 125px; }
@@ -287,7 +297,7 @@
 :global(body):has(.page) > footer :is(input, textarea) { font-size: 16px; }
 :global(body):has(.page) > footer input::placeholder,
 :global(body):has(.page) > footer textarea::placeholder { color: #aaa2b7; opacity: 1; }
-.ctaNote, .demoCaption, .toolMedia figcaption, .explorerNote, .exampleText small, .compatibilityNote { color: #b7adC4; font-size: 13px; }
+.ctaNote, .demoCaption, .toolMedia figcaption, .exampleText small, .compatibilityNote { color: #b7adC4; font-size: 13px; }
 .toolPicker button { min-height: 44px; }
 @media (hover: hover) and (pointer: fine) {
   .motionControl { opacity: .55; }

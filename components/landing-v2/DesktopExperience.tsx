@@ -12,7 +12,7 @@ export default function DesktopExperience() {
         <div className={styles.detailHeading}>
           <p className={styles.eyebrow}>DESKTOP EXPERIENCE · MAC & WINDOWS</p>
           <h2 id="desktop-title">Your commands.<br />Your shortcuts.</h2>
-          <p>Assign the AI actions you use most to custom keyboard shortcuts. Select text in your current application, press the assigned shortcut, and keep going.</p>
+          <p>Select text in your current application, press the assigned shortcut, and keep going.</p>
           <p className={styles.desktopBenefit}>Polish a message. Summarize a passage. Translate selected text. All without opening another AI app.</p>
           <a href="#downloads" className={styles.textLink}>Get KlikkFix for desktop <span aria-hidden="true">↓</span></a>
         </div>

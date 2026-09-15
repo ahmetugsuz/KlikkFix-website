@@ -8,17 +8,32 @@ export type DesktopMediaSource =
   | { kind: "image"; src: string; alt: string; width: number; height: number }
   | { kind: "video"; src: string; description: string; poster?: string; autoplay?: boolean };
 
+// User-provided examples of customizable shortcuts, not fixed product defaults.
+const shortcutExamples = [
+  { key: "I", action: "Improve Text" },
+  { key: "P", action: "Professional Text" },
+  { key: "S", action: "Summarize" },
+  { key: "T", action: "Translate" },
+];
+
 function ShortcutIllustration() {
   return (
     <figure className={styles.shortcutIllustration}>
       <p className={styles.eyebrow}>CUSTOM SHORTCUTS</p>
       <ul className={styles.shortcutMappings}>
-        {["Professional Text", "Summarize", "Translate", "Rewrite"].map((action) => (
-          <li key={action}><span className={styles.keycap}>Your shortcut</span><span aria-hidden="true">→</span><span>{action}</span></li>
+        {shortcutExamples.map(({ key, action }) => (
+          <li key={action}>
+            <span className={styles.shortcutKeys}>
+              <kbd className={styles.keycap}>Shift</kbd><span>+</span>
+              <kbd className={styles.keycap}>Alt</kbd><span>+</span>
+              <kbd className={styles.keycap}>{key}</kbd>
+            </span>
+            <span className={styles.shortcutAction}><span aria-hidden="true">→</span><span className={styles.srOnly}> runs </span>{action}</span>
+          </li>
         ))}
       </ul>
       <p className={styles.shortcutFlow}>Select text <span aria-hidden="true">→</span> Press your shortcut <span aria-hidden="true">→</span> Keep working</p>
-      <figcaption>Shortcut concept illustration. You choose the keys; these are not default bindings or an app screenshot.</figcaption>
+      <figcaption className={styles.shortcutCustomization}><strong>Fully customizable shortcuts.</strong> Assign the actions you use most to the key combinations that fit your workflow.</figcaption>
     </figure>
   );
 }

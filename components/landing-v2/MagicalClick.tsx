@@ -58,7 +58,6 @@ export default function MagicalClick() {
           )}
         </div>
       </div>
-      <p className={styles.explorerNote}>Your tools, your setup. Keep the actions you use most within reach.</p>
     </section>
   );
 }

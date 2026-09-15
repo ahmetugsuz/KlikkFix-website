@@ -17,7 +17,7 @@ export default function ProductExperiences() {
         <article>
           <p className={styles.eyebrow}>DESKTOP APP</p>
           <h3>Your AI tools. Now on your keyboard.</h3>
-          <p>Assign AI actions to custom shortcuts. Select text in the app you’re using and press your shortcut to run the command.</p>
+          <p>Assign AI actions to keyboard shortcuts. Select text, press your shortcut, and keep working in the app you’re already using.</p>
           <a href="#desktop" className={styles.textLink}>Explore desktop shortcuts <span aria-hidden="true">↓</span></a>
         </article>
       </div>
