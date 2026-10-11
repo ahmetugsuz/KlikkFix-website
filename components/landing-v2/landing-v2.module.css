@@ -86,8 +86,8 @@
 
 .videoFrame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #a993e55c; border-radius: 14px; background: #14121b; box-shadow: 0 24px 70px #00000050, -12px 0 45px #3e4bac14, 12px 0 45px #a23c9414; }
 .video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.videoControls { position: absolute; right: 14px; bottom: 14px; display: flex; gap: 8px; }
 .motionControl {
-  position: absolute; right: 14px; bottom: 14px;
   display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px;
   border: 1px solid #ffffff30; border-radius: 6px;
   color: #eee7fa; background: #17111ee8; font-size: 13px;
@@ -106,7 +106,28 @@
 .sectionHeading h2 span { color: #a29baF; }
 .sectionHeading > p:last-child { color: #a5a0b0; line-height: 1.7; font-size: 15px; max-width: 440px; margin: 20px auto 0; }
 .dashboardFrame { position: relative; max-width: 920px; margin: auto; padding: 10px; border: 1px solid #a28bc340; border-radius: 14px; background: linear-gradient(135deg, #28335166, #50316b55 50%, #682d533b); box-shadow: 0 20px 65px #0006, -25px 0 75px #384da326, 25px 15px 80px #9839a024; }
-.dashboard { display: block; width: 100%; height: auto; border-radius: 7px; filter: brightness(1.5) contrast(1.04); }
+.productGallery { max-width: 920px; margin: auto; }
+.galleryRotation { display: flex; align-items: center; gap: 8px; min-height: 44px; margin: 0 0 8px auto; padding: 8px 10px; border-radius: 6px; color: #c4b3d8; font-size: 13px; cursor: pointer; }
+.galleryRotation:hover { color: #fff; background: #ffffff06; }
+.galleryStage { position: relative; aspect-ratio: 8 / 5; border-radius: 7px; background: #14121b; }
+.gallerySlide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
+.gallerySlide[data-active="true"] { opacity: 1; pointer-events: auto; }
+.gallerySlide > a { display: block; height: 100%; border-radius: 7px; }
+.galleryImage { object-fit: contain; border-radius: 7px; }
+.galleryBrowserImage { filter: brightness(1.5) contrast(1.04); }
+.galleryFooter { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 3px 0; }
+.galleryFooter p { color: #d5c6e5; font-size: 14px; line-height: 1.6; }
+.galleryFooter p > span { display: block; margin-top: 4px; color: #aaa1b7; font-size: 12px; }
+.galleryNavigation { display: flex; align-items: center; flex-shrink: 0; gap: 2px; }
+.galleryNavigation button { display: inline-flex; align-items: center; justify-content: center; width: 36px; min-height: 44px; border-radius: 6px; color: #cdb4ec; font-size: 20px; cursor: pointer; }
+.galleryNavigation button:hover { color: #fff; background: #ffffff06; }
+.galleryNavigation .galleryDot { width: 28px; }
+.galleryDot span { width: 6px; height: 6px; border-radius: 50%; background: #83708f; }
+.galleryDot[aria-current="true"] span { width: 18px; border-radius: 4px; background: #c6a3f2; }
+@media (max-width: 600px) {
+  .galleryFooter { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .galleryNavigation { align-self: center; }
+}
 .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--inner-gap); padding: 0; list-style: none; }
 .steps li { padding: 0 32px; border-left: 1px solid #aa79df33; }
 .steps li:first-child { padding-left: 0; border-left: 0; }
@@ -147,7 +168,8 @@
   .desktopBreak { display: none; }
   .demo { margin-top: 30px; scroll-margin-top: 125px; }
   .videoFrame { border-radius: 9px; }
-  .motionControl { right: 8px; bottom: 8px; min-height: 36px; font-size: 10px; }
+  .videoControls { right: 8px; bottom: 8px; }
+  .motionControl { min-height: 36px; font-size: 10px; }
   .demoCta { margin-top: 18px; }
   .ctaNote { max-width: 245px; margin: 12px auto 0; line-height: 1.7; }
   .demoCaption { flex-direction: column; align-items: center; gap: 7px; font-size: 10px; }

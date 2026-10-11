@@ -1,15 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 import ProductExperiences from "@/components/landing-v2/ProductExperiences";
 import DesktopExperience from "@/components/landing-v2/DesktopExperience";
 import MagicalClick from "@/components/landing-v2/MagicalClick";
 import ProductDetails from "@/components/landing-v2/ProductDetails";
 import DemoVideo from "@/components/landing-v2/DemoVideo";
-import dashboard from "@/public/dashboard.png";
+import ProductGallery from "@/components/landing-v2/ProductGallery";
 import styles from "@/components/landing-v2/landing-v2.module.css";
 
 // Replace with "/videos/klikkfix-demo.mp4" when the final edit is ready.
-const demoSource = "/demoVideoes/outlookDemoProfessional.mp4";
+const demoSource = "/videos/KlikkFix_Marketing_Video_v4.mp4";
 
 const steps = [
   { title: "Select", text: "Highlight the text you want to work with." },
@@ -40,8 +39,8 @@ export default function LandingV2Page() {
           <p>Using AI shouldn’t mean leaving your work behind. The copying, prompting, and switching back all interrupt your flow.</p>
         </div>
         <div className={styles.beforeFlow}>
-          <p className={styles.eyebrow}>THE LONG WAY AROUND</p>
-          <ol>{["Leave your work", "Open an AI tab", "Copy & paste", "Write a prompt", "Copy the result", "Switch back"].map((item) => <li key={item}>{item}</li>)}</ol>
+          <p className={styles.eyebrow}>THE TRADITIONAL WAY</p>
+          <ol>{["Leave your workflow", "Open an AI tab", "Copy & paste", "Explain with a prompt ", "Copy the result", "Switch back to your workflow"].map((item) => <li key={item}>{item}</li>)}</ol>
         </div>
         <div className={styles.solutionHeading}>
           <p className={styles.eyebrow}>THERE’S A SHORTER WAY</p>
@@ -71,9 +70,7 @@ export default function LandingV2Page() {
           <h2 id="product-title">Make KlikkFix yours.</h2>
           <p>Keep the AI actions you use most within reach. Choose your browser tools in the dashboard, and assign custom shortcuts in the desktop app.</p>
         </div>
-        <div className={styles.dashboardFrame}>
-          <Image src={dashboard} alt="KlikkFix dashboard with available tools, selected tools, and account settings" sizes="(max-width: 760px) 92vw, 920px" className={styles.dashboard} />
-        </div>
+        <ProductGallery />
       </section>
 
       <ProductDetails />

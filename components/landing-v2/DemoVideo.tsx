@@ -17,10 +17,14 @@ export default function DemoVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [autoplay, setAutoplay] = useState(false);
   const [paused, setPaused] = useState(true);
+  const [muted, setMuted] = useState(true);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     setFailed(false);
+    setMuted(true);
+    // Every new source starts silently; only a visitor's click enables sound.
+    if (videoRef.current) videoRef.current.muted = true;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     function updatePlayback() {
       const video = videoRef.current;
@@ -28,8 +32,6 @@ export default function DemoVideo({
       if (preference.matches) {
         video?.pause();
       } else if (src && video) {
-        // Explicitly set the property as well for mobile autoplay policies.
-        video.muted = true;
         void video.play().catch(() => setPaused(true));
       }
     }
@@ -48,6 +50,13 @@ export default function DemoVideo({
     }
   }
 
+  function toggleMute() {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setMuted(video.muted);
+  }
+
   return (
     <figure className={styles.demo} id="demo">
       <div className={styles.videoFrame}>
@@ -58,7 +67,7 @@ export default function DemoVideo({
             src={src}
             poster={poster}
             preload="none"
-            muted
+            muted={muted}
             playsInline
             autoPlay={autoplay}
             loop
@@ -67,6 +76,7 @@ export default function DemoVideo({
             aria-describedby="demo-description"
             onPlay={() => setPaused(false)}
             onPause={() => setPaused(true)}
+            onVolumeChange={(event) => setMuted(event.currentTarget.muted)}
             onError={() => { setFailed(true); setPaused(true); }}
           />
         ) : (
@@ -76,10 +86,19 @@ export default function DemoVideo({
           </div>
         )}
         {src && !failed && (
-          <button className={styles.motionControl} onClick={togglePlayback} aria-label={paused ? "Resume demo" : "Pause demo"}>
-            <span aria-hidden="true">{paused ? "▷" : "Ⅱ"}</span>
-            {paused ? "Resume demo" : "Pause demo"}
-          </button>
+          <div className={styles.videoControls} role="group" aria-label="Demo controls">
+            <button type="button" className={styles.motionControl} onClick={toggleMute} aria-label={muted ? "Unmute demo" : "Mute demo"}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+                {muted ? <path d="m17 9 5 6m0-6-5 6" /> : <><path d="M15 8a6 6 0 0 1 0 8" /><path d="M18 5a10 10 0 0 1 0 14" /></>}
+              </svg>
+              {muted ? "Unmute" : "Mute"}
+            </button>
+            <button type="button" className={styles.motionControl} onClick={togglePlayback} aria-label={paused ? "Resume demo" : "Pause demo"}>
+              <span aria-hidden="true">{paused ? "▷" : "Ⅱ"}</span>
+              {paused ? "Resume demo" : "Pause demo"}
+            </button>
+          </div>
         )}
       </div>
       <figcaption className={styles.demoCaption}>

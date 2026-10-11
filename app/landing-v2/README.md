@@ -47,6 +47,14 @@ then restart it afterward: both commands use `.next` in this Next.js version.
 
 ## Media and layout polish
 
+The customization section uses `ProductGallery.tsx`: three selected desktop views
+(personalized assistant, hotkey configuration, and Linguistic DNA profiles), then
+the original browser dashboard. Duplicate dashboard captures are intentionally omitted.
+Images cycle every five seconds while visible; hover, manual navigation, and keyboard
+focus on the screenshots/navigation stop or pause rotation. A pause/resume control
+is provided. Reduced-motion users navigate manually. Images load lazily through
+Next Image, keep their proportions, and link to the original full-size screenshots.
+
 The original Improve, Translate, and Solve PNGs are RGBA assets with transparent
 backgrounds. They are served from public URLs without build-time image decoding
 (Turbopack exceeded its image memory limit on the original Translate export).
